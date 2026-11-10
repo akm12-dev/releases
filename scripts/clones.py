@@ -11,6 +11,7 @@ Jeton : fine-grained, propriétaire akm12-dev, permission « Administration : le
 import datetime
 import json
 import os
+import re
 import sys
 import urllib.request
 
@@ -32,6 +33,35 @@ def fetch_clones(repo: str, token: str) -> list:
         return json.load(r)["clones"]
 
 
+def fetch_software(token: str) -> dict:
+    req = urllib.request.Request(
+        f"https://api.github.com/repos/{OWNER}/releases/releases?per_page=100",
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "User-Agent": "akm12-stats",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=30) as r:
+        releases = json.load(r)
+    out: dict = {}
+    for rel in releases:
+        m = re.match(r"^(.+)-v(\d+(?:\.\d+)*)$", rel["tag_name"])
+        if not m or rel.get("draft"):
+            continue
+        sid, version = m.group(1), m.group(2)
+        entry = out.setdefault(sid, {"downloads": 0, "version": version, "_date": rel["published_at"]})
+        if rel["published_at"] > entry["_date"]:
+            entry["version"], entry["_date"] = version, rel["published_at"]
+        for a in rel["assets"]:
+            if not re.search(r"\.(pdf|txt)$", a["name"], re.I):
+                entry["downloads"] += int(a["download_count"])
+    for entry in out.values():
+        del entry["_date"]
+    return out
+
+
 def main() -> int:
     path = sys.argv[1]
     token = os.environ.get("STATS_TOKEN", "").strip()
@@ -43,7 +73,7 @@ def main() -> int:
             data = json.load(f)
     except FileNotFoundError:
         data = {"repos": {}}
-    before = json.dumps(data["repos"], sort_keys=True)
+    before = json.dumps({k: data.get(k) for k in ("repos", "software")}, sort_keys=True)
 
     failed = []
     for repo in REPOS:
@@ -62,7 +92,16 @@ def main() -> int:
             entry["days"][day] = max(entry["days"].get(day, 0), int(c["count"]))
         entry["total"] = sum(entry["days"].values())
 
-    if json.dumps(data["repos"], sort_keys=True) != before:
+    # Versions et téléchargements par logiciel (badges du profil GitHub) : mêmes règles que le site,
+    # fichiers .pdf et .txt (guides, SHA256SUMS) exclus, toutes versions additionnées.
+    try:
+        software = fetch_software(token)
+        data["software"] = software
+    except Exception as e:  # noqa: BLE001
+        print(f"releases : lecture impossible ({e})", file=sys.stderr)
+        failed.append("releases")
+
+    if json.dumps({k: data.get(k) for k in ("repos", "software")}, sort_keys=True) != before:
         data["updated"] = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
         with open(path, "w", encoding="utf-8", newline="\n") as f:
