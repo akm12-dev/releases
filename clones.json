@@ -19,11 +19,11 @@
   },
   "software": {
     "canon-scan-setup": {
-      "downloads": 2,
-      "version": "1.0.0"
+      "downloads": 6,
+      "version": "1.0.1"
     },
     "edendisk": {
-      "downloads": 4,
+      "downloads": 5,
       "version": "2.0.1"
     },
     "sav-service-tool": {
@@ -31,9 +31,9 @@
       "version": "2.0.1"
     },
     "toshiba-lexmark-scan-setup": {
-      "downloads": 3,
-      "version": "1.0.0"
+      "downloads": 5,
+      "version": "1.0.1"
     }
   },
-  "updated": "2026-11-10T02:39:48Z"
+  "updated": "2026-11-10T09:59:30Z"
 }
