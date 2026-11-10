@@ -17,5 +17,23 @@
       "total": 0
     }
   },
-  "updated": "2026-11-10T02:11:59Z"
+  "software": {
+    "canon-scan-setup": {
+      "downloads": 2,
+      "version": "1.0.0"
+    },
+    "edendisk": {
+      "downloads": 4,
+      "version": "2.0.1"
+    },
+    "sav-service-tool": {
+      "downloads": 4,
+      "version": "2.0.1"
+    },
+    "toshiba-lexmark-scan-setup": {
+      "downloads": 3,
+      "version": "1.0.0"
+    }
+  },
+  "updated": "2026-11-10T02:39:48Z"
 }
