@@ -1,8 +1,10 @@
 {
   "repos": {
     "canon-scan-setup": {
-      "days": {},
-      "total": 0
+      "days": {
+        "2026-11-10": 34
+      },
+      "total": 34
     },
     "edendisk": {
       "days": {
@@ -11,12 +13,16 @@
       "total": 18
     },
     "sav-service-tool": {
-      "days": {},
-      "total": 0
+      "days": {
+        "2026-11-10": 14
+      },
+      "total": 14
     },
     "toshiba-lexmark-scan-setup": {
-      "days": {},
-      "total": 0
+      "days": {
+        "2026-11-10": 21
+      },
+      "total": 21
     }
   },
   "software": {
@@ -33,9 +39,9 @@
       "version": "2.0.1"
     },
     "toshiba-lexmark-scan-setup": {
-      "downloads": 8,
-      "version": "1.0.1"
+      "downloads": 9,
+      "version": "1.1.0"
     }
   },
-  "updated": "2026-11-11T06:41:45Z"
+  "updated": "2026-11-11T15:22:35Z"
 }
