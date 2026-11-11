@@ -9,7 +9,7 @@ Catalogue, fiches et documentation : **https://akm12.com/logiciels**
 | Logiciel | Dernière version | Système |
 |---|---|---|
 | Canon Scan Setup | [1.0.1](https://github.com/akm12-dev/releases/releases/tag/canon-scan-setup-v1.0.1) | Windows |
-| Toshiba & Lexmark Scan Setup | [1.0.1](https://github.com/akm12-dev/releases/releases/tag/toshiba-lexmark-scan-setup-v1.0.1) | Windows |
+| Toshiba & Lexmark Scan Setup | [1.1.0](https://github.com/akm12-dev/releases/releases/tag/toshiba-lexmark-scan-setup-v1.1.0) | Windows |
 | EdenDisk | [2.0.1](https://github.com/akm12-dev/releases/releases/tag/edendisk-v2.0.1) | Windows |
 | SAV Service Tool | [2.0.1](https://github.com/akm12-dev/releases/releases/tag/sav-service-tool-v2.0.1) | Windows |
 
