@@ -16,7 +16,7 @@ import sys
 import urllib.request
 
 OWNER = "akm12-dev"
-REPOS = ["canon-scan-setup", "toshiba-lexmark-scan-setup", "edendisk", "sav-service-tool"]
+REPOS = ["canon-scan-setup", "toshiba-lexmark-scan-setup", "edendisk", "sav-service-tool", "eyecontrol"]
 
 
 def fetch_clones(repo: str, token: str) -> list:
