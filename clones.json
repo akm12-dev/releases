@@ -20,14 +20,15 @@
     },
     "toshiba-lexmark-scan-setup": {
       "days": {
-        "2026-11-10": 21
+        "2026-11-10": 21,
+        "2026-11-11": 4
       },
-      "total": 21
+      "total": 25
     }
   },
   "software": {
     "canon-scan-setup": {
-      "downloads": 9,
+      "downloads": 10,
       "version": "1.1.0"
     },
     "edendisk": {
@@ -43,5 +44,5 @@
       "version": "1.1.0"
     }
   },
-  "updated": "2026-11-12T03:53:45Z"
+  "updated": "2026-11-12T12:53:26Z"
 }
