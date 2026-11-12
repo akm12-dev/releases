@@ -8,7 +8,7 @@ Catalogue, fiches et documentation : **https://akm12.com/logiciels**
 
 | Logiciel | Dernière version | Système |
 |---|---|---|
-| Canon Scan Setup | [1.0.1](https://github.com/akm12-dev/releases/releases/tag/canon-scan-setup-v1.0.1) | Windows |
+| Canon Scan Setup | [1.1.0](https://github.com/akm12-dev/releases/releases/tag/canon-scan-setup-v1.1.0) | Windows, macOS |
 | Toshiba & Lexmark Scan Setup | [1.1.0](https://github.com/akm12-dev/releases/releases/tag/toshiba-lexmark-scan-setup-v1.1.0) | Windows |
 | EdenDisk | [2.0.1](https://github.com/akm12-dev/releases/releases/tag/edendisk-v2.0.1) | Windows |
 | SAV Service Tool | [2.0.1](https://github.com/akm12-dev/releases/releases/tag/sav-service-tool-v2.0.1) | Windows |
@@ -20,7 +20,13 @@ Les logiciels sont gratuits et ne demandent aucune inscription.
 Chaque version est accompagnée d'un fichier `SHA256SUMS-…txt` et de l'empreinte affichée sur la fiche akm12.com.
 
 ```powershell
-Get-FileHash .\CanonScanSetup-1.0.1-windows.exe -Algorithm SHA256
+Get-FileHash .\CanonScanSetup-1.1.0-windows.exe -Algorithm SHA256
+```
+
+Sur Mac (Terminal) :
+
+```bash
+shasum -a 256 ~/Downloads/CanonScanSetup-1.1.0-macos.dmg
 ```
 
 L'empreinte obtenue doit être identique à celle publiée. Sinon, supprimez le fichier et téléchargez-le de nouveau
