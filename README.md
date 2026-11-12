@@ -12,7 +12,7 @@ Catalogue, fiches et documentation : **https://akm12.com/logiciels**
 | Toshiba & Lexmark Scan Setup | [1.1.0](https://github.com/akm12-dev/releases/releases/tag/toshiba-lexmark-scan-setup-v1.1.0) | Windows |
 | EdenDisk | [2.0.1](https://github.com/akm12-dev/releases/releases/tag/edendisk-v2.0.1) | Windows |
 | SAV Service Tool | [2.0.1](https://github.com/akm12-dev/releases/releases/tag/sav-service-tool-v2.0.1) | Windows |
-| EyeControl | [0.1.0](https://github.com/akm12-dev/releases/releases/tag/eyecontrol-v0.1.0) | Windows, Linux |
+| EyeControl | [0.2.0](https://github.com/akm12-dev/releases/releases/tag/eyecontrol-v0.2.0) | Windows, Linux |
 
 Les logiciels sont gratuits et ne demandent aucune inscription.
 
