@@ -27,8 +27,8 @@
   },
   "software": {
     "canon-scan-setup": {
-      "downloads": 6,
-      "version": "1.0.1"
+      "downloads": 9,
+      "version": "1.1.0"
     },
     "edendisk": {
       "downloads": 5,
@@ -39,9 +39,9 @@
       "version": "2.0.1"
     },
     "toshiba-lexmark-scan-setup": {
-      "downloads": 9,
+      "downloads": 11,
       "version": "1.1.0"
     }
   },
-  "updated": "2026-11-11T15:22:35Z"
+  "updated": "2026-11-12T03:53:45Z"
 }
